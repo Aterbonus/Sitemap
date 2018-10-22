@@ -1,17 +1,17 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Thepixeldeveloper\Sitemap\Drivers;
+namespace Aterbonus\Sitemap\Drivers;
 
-use Thepixeldeveloper\Sitemap\Extensions\Image;
-use Thepixeldeveloper\Sitemap\Extensions\Link;
-use Thepixeldeveloper\Sitemap\Extensions\Mobile;
-use Thepixeldeveloper\Sitemap\Extensions\News;
-use Thepixeldeveloper\Sitemap\Extensions\Video;
-use Thepixeldeveloper\Sitemap\Interfaces\DriverInterface;
-use Thepixeldeveloper\Sitemap\Sitemap;
-use Thepixeldeveloper\Sitemap\SitemapIndex;
-use Thepixeldeveloper\Sitemap\Url;
-use Thepixeldeveloper\Sitemap\Urlset;
+use Aterbonus\Sitemap\Extensions\Image;
+use Aterbonus\Sitemap\Extensions\Link;
+use Aterbonus\Sitemap\Extensions\Mobile;
+use Aterbonus\Sitemap\Extensions\News;
+use Aterbonus\Sitemap\Extensions\Video;
+use Aterbonus\Sitemap\Interfaces\DriverInterface;
+use Aterbonus\Sitemap\Sitemap;
+use Aterbonus\Sitemap\SitemapIndex;
+use Aterbonus\Sitemap\Url;
+use Aterbonus\Sitemap\Urlset;
 use XMLWriter;
 
 /**
@@ -20,7 +20,7 @@ use XMLWriter;
  * Because this driver is forward only (can't go back and
  * define additional attributes) there's some logic
  *
- * @package Thepixeldeveloper\Sitemap\Drivers
+ * @package Aterbonus\Sitemap\Drivers
  */
 class XmlWriterDriver implements DriverInterface
 {
@@ -72,17 +72,17 @@ class XmlWriterDriver implements DriverInterface
         $this->writer = $writer;
     }
 
-    public function addProcessingInstructions(string $target, string $content)
+    public function addProcessingInstructions($target, $content)
     {
         $this->writer->writePI($target, $content);
     }
 
-    public function addComment(string $comment)
+    public function addComment($comment)
     {
         $this->writer->writeComment($comment);
     }
 
-    private function writeElement(string $name, $content)
+    private function writeElement($name, $content)
     {
         if (!$content) {
             return;
@@ -268,7 +268,7 @@ class XmlWriterDriver implements DriverInterface
         $this->writer->endElement();
     }
 
-    public function output(): string
+    public function output()
     {
         return $this->writer->flush();
     }

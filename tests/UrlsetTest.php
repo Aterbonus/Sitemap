@@ -1,11 +1,11 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Tests\Thepixeldeveloper\Sitemap;
+namespace Tests\Aterbonus\Sitemap;
 
 use PHPUnit\Framework\TestCase;
-use Thepixeldeveloper\Sitemap\Sitemap;
-use Thepixeldeveloper\Sitemap\Url;
-use Thepixeldeveloper\Sitemap\Urlset;
+use Aterbonus\Sitemap\Sitemap;
+use Aterbonus\Sitemap\Url;
+use Aterbonus\Sitemap\Urlset;
 
 class UrlsetTest extends TestCase
 {

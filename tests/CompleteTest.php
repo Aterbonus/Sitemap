@@ -1,18 +1,18 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Tests\Thepixeldeveloper\Sitemap;
+namespace Tests\Aterbonus\Sitemap;
 
 use PHPUnit\Framework\TestCase;
-use Thepixeldeveloper\Sitemap\Drivers\XmlWriterDriver;
-use Thepixeldeveloper\Sitemap\Extensions\Image;
-use Thepixeldeveloper\Sitemap\Extensions\Link;
-use Thepixeldeveloper\Sitemap\Extensions\Mobile;
-use Thepixeldeveloper\Sitemap\Extensions\News;
-use Thepixeldeveloper\Sitemap\Extensions\Video;
-use Thepixeldeveloper\Sitemap\Sitemap;
-use Thepixeldeveloper\Sitemap\SitemapIndex;
-use Thepixeldeveloper\Sitemap\Url;
-use Thepixeldeveloper\Sitemap\Urlset;
+use Aterbonus\Sitemap\Drivers\XmlWriterDriver;
+use Aterbonus\Sitemap\Extensions\Image;
+use Aterbonus\Sitemap\Extensions\Link;
+use Aterbonus\Sitemap\Extensions\Mobile;
+use Aterbonus\Sitemap\Extensions\News;
+use Aterbonus\Sitemap\Extensions\Video;
+use Aterbonus\Sitemap\Sitemap;
+use Aterbonus\Sitemap\SitemapIndex;
+use Aterbonus\Sitemap\Url;
+use Aterbonus\Sitemap\Urlset;
 
 class CompleteTest extends TestCase
 {

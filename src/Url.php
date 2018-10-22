@@ -1,10 +1,10 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Thepixeldeveloper\Sitemap;
+namespace Aterbonus\Sitemap;
 
 use DateTimeInterface;
-use Thepixeldeveloper\Sitemap\Interfaces\DriverInterface;
-use Thepixeldeveloper\Sitemap\Interfaces\VisitorInterface;
+use Aterbonus\Sitemap\Interfaces\DriverInterface;
+use Aterbonus\Sitemap\Interfaces\VisitorInterface;
 
 class Url implements VisitorInterface
 {
@@ -43,7 +43,7 @@ class Url implements VisitorInterface
      */
     private $extensions = [];
 
-    public function __construct(string $loc)
+    public function __construct($loc)
     {
         $this->loc = $loc;
     }
@@ -51,7 +51,7 @@ class Url implements VisitorInterface
     /**
      * @return string
      */
-    public function getLoc(): string
+    public function getLoc()
     {
         return $this->loc;
     }
@@ -83,7 +83,7 @@ class Url implements VisitorInterface
     /**
      * @param string $changeFreq
      */
-    public function setChangeFreq(string $changeFreq)
+    public function setChangeFreq($changeFreq)
     {
         $this->changeFreq = $changeFreq;
     }
@@ -99,7 +99,7 @@ class Url implements VisitorInterface
     /**
      * @param string $priority
      */
-    public function setPriority(string $priority)
+    public function setPriority($priority)
     {
         $this->priority = $priority;
     }
@@ -115,7 +115,7 @@ class Url implements VisitorInterface
     /**
      * @return VisitorInterface[]
      */
-    public function getExtensions(): array
+    public function getExtensions()
     {
         return $this->extensions;
     }

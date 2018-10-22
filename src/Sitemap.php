@@ -1,10 +1,10 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Thepixeldeveloper\Sitemap;
+namespace Aterbonus\Sitemap;
 
 use DateTimeInterface;
-use Thepixeldeveloper\Sitemap\Interfaces\DriverInterface;
-use Thepixeldeveloper\Sitemap\Interfaces\VisitorInterface;
+use Aterbonus\Sitemap\Interfaces\DriverInterface;
+use Aterbonus\Sitemap\Interfaces\VisitorInterface;
 
 class Sitemap implements VisitorInterface
 {
@@ -22,7 +22,7 @@ class Sitemap implements VisitorInterface
      */
     private $lastMod;
 
-    public function __construct(string $loc)
+    public function __construct($loc)
     {
         $this->loc = $loc;
     }
@@ -30,7 +30,7 @@ class Sitemap implements VisitorInterface
     /**
      * @return string
      */
-    public function getLoc(): string
+    public function getLoc()
     {
         return $this->loc;
     }

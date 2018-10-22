@@ -1,12 +1,12 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Thepixeldeveloper\Sitemap;
+namespace Aterbonus\Sitemap;
 
-use Thepixeldeveloper\Sitemap\Interfaces\DriverInterface;
+use Aterbonus\Sitemap\Interfaces\DriverInterface;
 
 class SitemapIndex extends Collection
 {
-    public function type(): string
+    public function type()
     {
         return Sitemap::class;
     }

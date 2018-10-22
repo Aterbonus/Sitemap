@@ -1,14 +1,14 @@
 <?php
 
-namespace Thepixeldeveloper\Sitemap\Extensions;
+namespace Aterbonus\Sitemap\Extensions;
 
-use Thepixeldeveloper\Sitemap\Interfaces\DriverInterface;
-use Thepixeldeveloper\Sitemap\Interfaces\VisitorInterface;
+use Aterbonus\Sitemap\Interfaces\DriverInterface;
+use Aterbonus\Sitemap\Interfaces\VisitorInterface;
 
 /**
  * Class Link
  *
- * @package Thepixeldeveloper\Sitemap\Subelements
+ * @package Aterbonus\Sitemap\Subelements
  */
 class Link implements VisitorInterface
 {
@@ -32,7 +32,7 @@ class Link implements VisitorInterface
      * @param string $hrefLang
      * @param string $href
      */
-    public function __construct(string $hrefLang, string $href)
+    public function __construct($hrefLang, $href)
     {
         $this->hrefLang = $hrefLang;
         $this->href = $href;
@@ -43,7 +43,7 @@ class Link implements VisitorInterface
      *
      * @return string
      */
-    public function getHref(): string
+    public function getHref()
     {
         return $this->href;
     }
@@ -53,7 +53,7 @@ class Link implements VisitorInterface
      * 
      * @return string
      */
-    public function getHrefLang(): string
+    public function getHrefLang()
     {
         return $this->hrefLang;
     }

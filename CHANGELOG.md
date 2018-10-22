@@ -1,3 +1,10 @@
+5.2.0
+-----
+
+**New features**
+
+1. Adapted to work on php 5.6^
+
 5.1.0
 -----
 

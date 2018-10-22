@@ -1,10 +1,10 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Tests\Thepixeldeveloper\Sitemap;
+namespace Tests\Aterbonus\Sitemap;
 
 use PHPUnit\Framework\TestCase;
-use Thepixeldeveloper\Sitemap\ChunkedUrlset;
-use Thepixeldeveloper\Sitemap\Url;
+use Aterbonus\Sitemap\ChunkedUrlset;
+use Aterbonus\Sitemap\Url;
 
 class ChunkedUrlsetTest extends TestCase
 {

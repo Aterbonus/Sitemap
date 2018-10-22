@@ -1,12 +1,7 @@
-# Thepixeldeveloper\Sitemap
+# Aterbonus\Sitemap
 
-[![pipeline status](https://www.devkit.net/mathew-davies/Sitemap/badges/master/pipeline.svg)](https://www.devkit.net/mathew-davies/Sitemap/commits/master)
-[![coverage report](https://www.devkit.net/mathew-davies/Sitemap/badges/master/coverage.svg)](https://www.devkit.net/mathew-davies/Sitemap/commits/master)
-[![License](https://poser.pugx.org/thepixeldeveloper/sitemap/license)](https://packagist.org/packages/thepixeldeveloper/sitemap)
-[![Latest Stable Version](https://poser.pugx.org/thepixeldeveloper/sitemap/v/stable)](https://packagist.org/packages/thepixeldeveloper/sitemap)
-[![Total Downloads](https://poser.pugx.org/thepixeldeveloper/sitemap/downloads)](https://packagist.org/packages/thepixeldeveloper/sitemap)
-
-A tool to generate XML sitemaps. Integrates with Symfony via [SitemapBundle](https://github.com/thepixeldeveloper/sitemapbundle)
+**WARNING**: This is a quick repo from [thepixeldeveloper/sitemap](https://github.com/ThePixelDeveloper/Sitemap) 
+to make it work on PHP ^5.6. You should use the original repo if you have access to PHP 7. Don't expect updates.
 
 * [Installation](#installation)
 * [Basic Usage](#basic-usage)
@@ -16,7 +11,7 @@ A tool to generate XML sitemaps. Integrates with Symfony via [SitemapBundle](htt
 ## Installation
 
 ``` bash
-composer require "thepixeldeveloper/sitemap"
+composer require "Aterbonus/sitemap"
 ```
 
 ## Basic Usage
@@ -24,11 +19,11 @@ composer require "thepixeldeveloper/sitemap"
 Generating a typical (\<urlset\>) sitemap.
 
 ``` php
-<?php declare(strict_types=1);
+<?php
 
-use Thepixeldeveloper\Sitemap\Urlset;
-use Thepixeldeveloper\Sitemap\Url;
-use Thepixeldeveloper\Sitemap\Drivers\XmlWriterDriver;
+use Aterbonus\Sitemap\Urlset;
+use Aterbonus\Sitemap\Url;
+use Aterbonus\Sitemap\Drivers\XmlWriterDriver;
 
 $url = new Url($loc);
 $url->setLastMod($lastMod);
@@ -47,11 +42,11 @@ echo $driver->getOutput();
 Generating a parent (\<sitemapindex\>) sitemap.
 
 ``` php
-<?php declare(strict_types=1);
+<?php
 
-use Thepixeldeveloper\Sitemap\SitemapIndex;
-use Thepixeldeveloper\Sitemap\Sitemap;
-use Thepixeldeveloper\Sitemap\Drivers\XmlWriterDriver;
+use Aterbonus\Sitemap\SitemapIndex;
+use Aterbonus\Sitemap\Sitemap;
+use Aterbonus\Sitemap\Drivers\XmlWriterDriver;
 
 // Sitemap entry.
 $url = new Sitemap($loc);
@@ -73,11 +68,11 @@ The following extensions are supported: [Image](tree/master/src/Extensions/Image
 following way (taking image as an example):
 
 ``` php
-<?php declare(strict_types=1);
+<?php
 
-use Thepixeldeveloper\Sitemap\Urlset;
-use Thepixeldeveloper\Sitemap\Url;
-use Thepixeldeveloper\Sitemap\Extensions\Image;
+use Aterbonus\Sitemap\Urlset;
+use Aterbonus\Sitemap\Url;
+use Aterbonus\Sitemap\Extensions\Image;
 
 $url = new Url($loc);
 $url->setLastMod($lastMod);
@@ -98,9 +93,9 @@ $url->addExtension($image);
 You can add processing instructions on the output as such.
 
 ```php
-<?php declare(strict_types=1);
+<?php
 
-use Thepixeldeveloper\Sitemap\Drivers\XmlWriterDriver;
+use Aterbonus\Sitemap\Drivers\XmlWriterDriver;
 
 $driver = new XmlWriterDriver();
 $driver->addProcessingInstructions('xml-stylesheet', 'type="text/xsl" href="/path/to/xslt/main-sitemap.xsl"');
@@ -118,9 +113,9 @@ Which will add before the document starts.
 Comments are useful for information such as when the file was created.
 
 ```php
-<?php declare(strict_types=1);
+<?php
 
-use Thepixeldeveloper\Sitemap\Drivers\XmlWriterDriver;
+use Aterbonus\Sitemap\Drivers\XmlWriterDriver;
 
 $date = date('Y-m-d H:i:s');
 

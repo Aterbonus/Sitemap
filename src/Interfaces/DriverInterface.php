@@ -1,16 +1,16 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Thepixeldeveloper\Sitemap\Interfaces;
+namespace Aterbonus\Sitemap\Interfaces;
 
-use Thepixeldeveloper\Sitemap\Extensions\Image;
-use Thepixeldeveloper\Sitemap\Extensions\Link;
-use Thepixeldeveloper\Sitemap\Extensions\Mobile;
-use Thepixeldeveloper\Sitemap\Extensions\News;
-use Thepixeldeveloper\Sitemap\Extensions\Video;
-use Thepixeldeveloper\Sitemap\Sitemap;
-use Thepixeldeveloper\Sitemap\SitemapIndex;
-use Thepixeldeveloper\Sitemap\Url;
-use Thepixeldeveloper\Sitemap\Urlset;
+use Aterbonus\Sitemap\Extensions\Image;
+use Aterbonus\Sitemap\Extensions\Link;
+use Aterbonus\Sitemap\Extensions\Mobile;
+use Aterbonus\Sitemap\Extensions\News;
+use Aterbonus\Sitemap\Extensions\Video;
+use Aterbonus\Sitemap\Sitemap;
+use Aterbonus\Sitemap\SitemapIndex;
+use Aterbonus\Sitemap\Url;
+use Aterbonus\Sitemap\Urlset;
 
 interface DriverInterface
 {
@@ -32,5 +32,5 @@ interface DriverInterface
 
     public function visitVideoExtension(Video $video);
 
-    public function output(): string;
+    public function output();
 }

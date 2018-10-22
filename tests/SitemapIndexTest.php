@@ -1,10 +1,10 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Tests\Thepixeldeveloper\Sitemap;
+namespace Tests\Aterbonus\Sitemap;
 
 use PHPUnit\Framework\TestCase;
-use Thepixeldeveloper\Sitemap\SitemapIndex;
-use Thepixeldeveloper\Sitemap\Url;
+use Aterbonus\Sitemap\SitemapIndex;
+use Aterbonus\Sitemap\Url;
 
 class SitemapIndexTest extends TestCase
 {

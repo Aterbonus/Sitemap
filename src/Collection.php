@@ -1,8 +1,8 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Thepixeldeveloper\Sitemap;
+namespace Aterbonus\Sitemap;
 
-use Thepixeldeveloper\Sitemap\Interfaces\VisitorInterface;
+use Aterbonus\Sitemap\Interfaces\VisitorInterface;
 
 abstract class Collection implements VisitorInterface
 {
@@ -25,10 +25,10 @@ abstract class Collection implements VisitorInterface
     /**
      * @return VisitorInterface[]
      */
-    public function all(): array
+    public function all()
     {
         return $this->items;
     }
 
-    abstract public function type(): string;
+    abstract public function type();
 }

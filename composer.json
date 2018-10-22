@@ -1,35 +1,32 @@
 {
-	"name": "thepixeldeveloper/sitemap",
+	"name": "Aterbonus/sitemap",
 	"type": "library",
-	"description": "PHP XML sitemap generation",
+	"description": "PHP XML sitemap generation for PHP ^5.6 forked from \"thepixeldeveloper/sitemap\"",
 	"keywords": ["php", "sitemap", "xml", "sitemap-php", "sitemap-builder", "sitemap-generator", "sitemap-xml", "xml-sitemap"],
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Mathew Davies",
+			"name": "Gustasvo Alfredo Marín Sáez",
 			"role": "Developer"
 		}
 	],
 	"require": {
-		"php": ">=7.1"
+		"php": ">=5.6"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "^7",
-		"phpstan/phpstan": "^0",
-		"phpstan/phpstan-phpunit": "^0"
+		"phpunit/phpunit": "^5"
 	},
 	"autoload": {
 		"psr-4": {
-			"Thepixeldeveloper\\Sitemap\\": "src/"
+			"Aterbonus\\Sitemap\\": "src/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Tests\\Thepixeldeveloper\\Sitemap\\": "tests/"
+			"Tests\\Aterbonus\\Sitemap\\": "tests/"
 		}
 	},
 	"scripts": {
-		"test": "phpdbg -qrr vendor/bin/phpunit --coverage-text --colors=never --coverage-html ./coverage",
-		"lint": "phpstan analyse src tests --level=7 -c phpstan.neon"
+		"test": "vendor/bin/phpunit --coverage-text --colors=never --coverage-html ./coverage"
 	}
 }

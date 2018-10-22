@@ -1,14 +1,14 @@
 <?php
 
-namespace Thepixeldeveloper\Sitemap\Extensions;
+namespace Aterbonus\Sitemap\Extensions;
 
-use Thepixeldeveloper\Sitemap\Interfaces\DriverInterface;
-use Thepixeldeveloper\Sitemap\Interfaces\VisitorInterface;
+use Aterbonus\Sitemap\Interfaces\DriverInterface;
+use Aterbonus\Sitemap\Interfaces\VisitorInterface;
 
 /**
  * Class Image
  *
- * @package Thepixeldeveloper\Sitemap\Subelements
+ * @package Aterbonus\Sitemap\Subelements
  */
 class News implements VisitorInterface
 {

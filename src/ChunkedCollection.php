@@ -1,8 +1,8 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Thepixeldeveloper\Sitemap;
+namespace Aterbonus\Sitemap;
 
-use Thepixeldeveloper\Sitemap\Interfaces\VisitorInterface;
+use Aterbonus\Sitemap\Interfaces\VisitorInterface;
 
 abstract class ChunkedCollection
 {
@@ -40,10 +40,10 @@ abstract class ChunkedCollection
     /**
      * @return Collection[]
      */
-    public function getCollections(): array
+    public function getCollections()
     {
         return $this->collections;
     }
 
-    abstract protected function getCollectionClass(): Collection;
+    abstract protected function getCollectionClass();
 }

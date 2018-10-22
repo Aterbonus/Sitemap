@@ -1,10 +1,10 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Thepixeldeveloper\Sitemap;
+namespace Aterbonus\Sitemap;
 
 class ChunkedUrlset extends ChunkedCollection
 {
-    protected function getCollectionClass(): Collection
+    protected function getCollectionClass()
     {
         return new Urlset();
     }
